@@ -35,7 +35,7 @@ public class EasyObjectExtract {
 	 * @param fields 要抽取的字段列表，区分大小
 	 * @return 以List返回所有抽取的Map集合
 	 */
-	public static List<Map> extract(Collection objCollection, Map fieldExpressionAndOutNameMap, String... fields) {
+	public static List<Map> extract(Collection objCollection, Map<String,String> fieldExpressionAndOutNameMap, String... fields) {
 		List<Map> list = new ArrayList<Map>();
 		for (Object o : objCollection) {
 			list.add(extract(o,fieldExpressionAndOutNameMap, fields));
@@ -108,7 +108,7 @@ public class EasyObjectExtract {
 	 * @param fields 要抽取的字段列表，区分大小
 	 * @return 以List返回所有抽取的Map集合
 	 */
-	public static List<Map> extract(Object[] array, Map fieldExpressionAndOutNameMap, String... fields) {
+	public static List<Map> extract(Object[] array, Map<String, String> fieldExpressionAndOutNameMap, String... fields) {
 		List<Map> list = new ArrayList<Map>();
 		for (Object o : array) {
 			list.add(extract(o,fieldExpressionAndOutNameMap, fields));

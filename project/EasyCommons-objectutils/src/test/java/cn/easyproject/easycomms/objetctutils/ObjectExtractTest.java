@@ -1,7 +1,9 @@
 package cn.easyproject.easycomms.objetctutils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -37,6 +39,16 @@ public class ObjectExtractTest {
 		Map m = EasyObjectExtract.extract(a,fieldExpressionAndOutNameMap, "a", "{bs}.b");
 
 		System.out.println(m);
+		
+		
+		
+		List<A2> list=new ArrayList<A2>();
+		list.add(a);
+		list.add(a);
+		list.add(a);
+		list.add(a);
+		
+		
 		// Gson gson = new Gson();
 		// System.out.println(gson.toJson(m));
 	}
