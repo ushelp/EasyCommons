@@ -17,6 +17,8 @@ Specify the attribute that: property.property
 Each object in the specified collection: {collection}
 Each object in the specified array: [array] Attribute specifies for each object in the collection: {collection} .property
 Attribute specifies for each object in the array: [array] .property
+
+Alias definitions (only for EasyObjectExtract): FieldExpression#Alias
 ```
 
 ## 3. API summary
@@ -33,13 +35,19 @@ EasyObjectUtils It includes the following components:
   *@param object the object data to be extracted
   *@param collection object data set to be extracted
   *@param array array object data to be extracted
-  *@param fieldExpressionAndOutNameMap field mapping list expressions and output names, optional default output name field expression name
-  *@param fieldExpressions expression array list fields, variable parameters
-  * Map aggregate resultsreturn extraction
+  *@param fieldExpressionAndOutNameMap Map list field expression and output alias, optional default field expression name as the output name
+  *@param fieldExpressions A list of the fields to be extracted expression, variable parameters, is case-sensitive; support hash character alias definition
+  *@return Map collection extracted results
  */
 Map extract(object [, fieldExpressionAndOutNameMap], fieldExpressions)
 List<Map> extract(collection [, fieldExpressionAndOutNameMap], fieldExpressions)
 List<Map> extract(array [, fieldExpressionAndOutNameMap], fieldExpressions)
+```
+** demo:**
+```JAVA
+List<Map> list = EasyObjectExtract.extract(getData(), 
+				"userId", "name", "status", "{sysRoles}.name#roleNames",
+				"{sysRoles}.roleId#roleIds");
 ```
 
 2. **EasyObjectFilter**:Object filtering. The object of special characters (<,>, ...) to filter out, into the escape character; or custom character transformation maps.
@@ -59,6 +67,14 @@ filter(collection [, specialCharacterMap] [, doNotFieldArray])；
 filter(array [, specialCharacterMap] [, doNotFieldArray])；
 ```
 
+ **demo:**
+```JAVA
+Map replaceMap=new HashMap();
+replaceMap.put("drug","*");
+replaceMap.put("fuck","F***");
+EasyObjectExtract.filter(news,replaceMap);
+```
+
 3. **EasyObjectSetNull**:Object Properties empty. Using field expressions (`FieldExpression`) specified property set to null object.
   ** Suit the scene** : Hibernate object loaded some delay attribute set can not be loaded is empty, to prevent abnormal when no session serialized property.
 ```JAVA
@@ -73,6 +89,10 @@ filter(array [, specialCharacterMap] [, doNotFieldArray])；
 setNull(Object, fieldExpressions)
 setNull(Collection, fieldExpressions)
 setNull(Object[], fieldExpressions)
+```
+ **demo:**
+```JAVA
+EasyObjectSetNull.setNull(users, "password","{roles}.rights");
 ```
 
 ## End

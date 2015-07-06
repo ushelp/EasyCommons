@@ -18,6 +18,8 @@ EasyObjectUtils的工具类中使用到了**EasyObject FieldExpression（字段�
  指定数组中每一个对象： [array] 
  指定集合中每一个对象的属性：{collection}.property 
  指定数组中每一个对象的属性：[array].property 
+
+ 别名定义(仅适用于EasyObjectExtract)：FieldExpression#Alias
 ```
 
 ## 3. API 简介
@@ -34,13 +36,20 @@ EasyObjectUtils 包括如下组件：
  * @param object 要抽取数据的对象
  * @param collection 要抽取数据的对象集合
  * @param array 要抽取数据的对象数组
- * @param fieldExpressionAndOutNameMap 字段表达式和输出名的映射列表，可选，默认输出名为字段表达式名
- * @param fieldExpressions 字段表达式数组列表，不定参
+ * @param fieldExpressionAndOutNameMap 字段表达式和输出别名的映射列表，可选，默认字段表达式名作为输出名
+ * @param fieldExpressions 要抽取的字段表达式列表，不定参，区分大小写；支持#号分隔的别名定义
  * @return 抽取的Map集合结果
  */
 Map extract(object [, fieldExpressionAndOutNameMap], fieldExpressions)
 List<Map> extract(collection [, fieldExpressionAndOutNameMap], fieldExpressions)
 List<Map> extract(array [, fieldExpressionAndOutNameMap], fieldExpressions)
+```
+
+ **demo:**
+```JAVA
+List<Map> list = EasyObjectExtract.extract(getData(), 
+				"userId", "name", "status", "{sysRoles}.name#roleNames",
+				"{sysRoles}.roleId#roleIds");
 ```
 
 2. **EasyObjectFilter**：对象过滤。将对象中的特殊字符(<,>,...)全部过滤掉，转为转义符；或者自定义字符转换映射。 
@@ -59,6 +68,13 @@ filter(object [, specialCharacterMap] [, doNotFieldArray])；
 filter(collection [, specialCharacterMap] [, doNotFieldArray])；
 filter(array [, specialCharacterMap] [, doNotFieldArray])；
 ```
+ **demo:**
+```JAVA
+Map replaceMap=new HashMap();
+replaceMap.put("drug","*");
+replaceMap.put("fuck","F***");
+EasyObjectExtract.filter(news,replaceMap);
+```
 
 3. **EasyObjectSetNull**：对象属性置空。使用字段表达式(`FieldExpression`)将对象中指定属性设置为null。 
  **适合场景**：将Hibernate加载的对象中有些延迟无法加载的属性设置为空 ，防止在序列化属性时出现no session异常。
@@ -74,6 +90,10 @@ filter(array [, specialCharacterMap] [, doNotFieldArray])；
 setNull(Object, fieldExpressions)
 setNull(Collection, fieldExpressions)
 setNull(Object[], fieldExpressions)
+```
+ **demo:**
+```JAVA
+EasyObjectSetNull.setNull(users, "password","{roles}.rights");
 ```
 
 ## 结束
