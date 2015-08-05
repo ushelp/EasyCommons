@@ -52,8 +52,8 @@ List<Map> list = EasyObjectExtract.extract(getData(),
 				"{sysRoles}.roleId#roleIds");
 ```
 
-2. **EasyObjectFilter**：对象过滤。将对象中的特殊字符(<,>,...)全部过滤掉，转为转义符；或者自定义字符转换映射。 
-**适合场景**：将对象中的字符串包含的特殊字符进行过滤转换为字符实体；或将对象字符串属性中包含的字符全部替换为指定字符。例如，在Struts2中文件上传时提交的数据封装到对象后，对对象中可能包含的用户提交的的特殊字符串的进行转义。
+2. **EasyObjectFilter**：对象过滤。将JavaBean对象属性中的特殊字符(<,>,...)全部过滤掉，转为转义符；或者自定义字符转换映射。 
+**适合场景**：将JavaBean对象属性中的字符串包含的特殊字符进行过滤转换为字符实体；或将对象字符串属性中包含的字符全部替换为指定字符。例如，在Struts2中文件上传时提交的数据封装到对象后，对对象中可能包含的用户提交的的特殊字符串的进行转义。
 ```JAVA
  /**
  * 过滤对象中字符串属性中包含的特殊字符，默认替换<, >为字符实体&lt;, &gt
@@ -64,9 +64,9 @@ List<Map> list = EasyObjectExtract.extract(getData(),
  * @param specialCharacterMap 自定义的过滤映射列表（key为要过滤的字符，value为过滤后的字符）
  * @param doNotFieldArray 不进行过滤的字段名数组
  */
-filter(object [, specialCharacterMap] [, doNotFieldArray])；
-filter(collection [, specialCharacterMap] [, doNotFieldArray])；
-filter(array [, specialCharacterMap] [, doNotFieldArray])；
+filter(object [, specialCharacterMap] [, doNotFieldArray]);
+filter(collection [, specialCharacterMap] [, doNotFieldArray]);
+filter(array [, specialCharacterMap] [, doNotFieldArray]);
 ```
  **demo:**
 ```JAVA

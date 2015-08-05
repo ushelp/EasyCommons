@@ -50,8 +50,8 @@ List<Map> list = EasyObjectExtract.extract(getData(),
 				"{sysRoles}.roleId#roleIds");
 ```
 
-2. **EasyObjectFilter**:Object filtering. The object of special characters (<,>, ...) to filter out, into the escape character; or custom character transformation maps.
-** Suit the scene** : the special character object contains a string to filter into character entity; or a character string property objects included replacing all the specified character. For example, the data in the file upload Struts2 package submitted to the object, a special string to the user object may contain submitted escaped.
+2. **EasyObjectFilter**:Object filtering. The JavaBean object properties of special characters (<,>, ...) to filter out, into the escape character; or custom character transformation maps.
+** Suit the scene** : the special character JavaBean object properties contains a string to filter into character entity; or a character string property objects included replacing all the specified character. For example, the data in the file upload Struts2 package submitted to the object, a special string to the user object may contain submitted escaped.
 ```JAVA
  /**
  * Special character filtering object attribute contains the string, the default Replace <,> is the character entity & lt ;, & gt
@@ -62,9 +62,9 @@ List<Map> list = EasyObjectExtract.extract(getData(),
   *@param specialCharacterMap Filter mapping listparam specialCharacterMap custom (key for the character you want to filter, value character filtered)
   *@param DoNotFieldArray does not filter the array of field names
  */
-filter(object [, specialCharacterMap] [, doNotFieldArray])；
-filter(collection [, specialCharacterMap] [, doNotFieldArray])；
-filter(array [, specialCharacterMap] [, doNotFieldArray])；
+filter(object [, specialCharacterMap] [, doNotFieldArray]);
+filter(collection [, specialCharacterMap] [, doNotFieldArray]);
+filter(array [, specialCharacterMap] [, doNotFieldArray]);
 ```
 
  **demo:**

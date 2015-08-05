@@ -16,6 +16,7 @@ Currently consists of the following components:
 ##  1. EasyImageUtils:
 
 Image processing tools under EasyCommons project. Comprising the following components:
+
 1. **EasyImageCompressionUtils**: change the image size compression tools, support network pictures, geometric, higher maximum wide variety of modes.
 **Suit the scene** : compression to upload pictures of different sizes.
 
@@ -61,8 +62,8 @@ Obejct manipulation tools under EasyCommons project.
 1. ** EasyObjectExtract **: extraction of the object. Using field expression from the object (`FieldExpression`) to extract the specified property deposited ** key-value ** Map collection.
 ** Suit the scene **: JSON output, specify the output attributes and values extracted from the object.
 
-2. ** EasyObjectFilter **: Object filtering. The object of special characters (<,>, ...) to filter out, into the escape character; or custom character transformation maps.
-** Suit the scene** : the special character object contains a string to filter into character entity; or a character string property objects included replacing all the specified character. For example, the data in the file upload Struts2 package submitted to the object, a special string to the user object may contain submitted escaped.
+2. ** EasyObjectFilter **: JavaBean Object property filtering. The object of special characters (<,>, ...) to filter out, into the escape character; or custom character transformation maps.
+** Suit the scene** : the special character JavaBean Object property contains a string to filter into character entity; or a character string property objects included replacing all the specified character. For example, the data in the file upload Struts2 package submitted to the object, a special string to the user object may contain submitted escaped.
 
 3. ** EasyObjectSetNull **: Object Properties empty. Using field expressions (`FieldExpression`) specified property set to null object.
   ** Suit the scene** : Hibernate object loaded some delay attribute set can not be loaded is empty, to prevent abnormal when no session serialized property.
