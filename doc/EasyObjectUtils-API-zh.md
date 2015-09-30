@@ -3,6 +3,7 @@
 ---------------
 [EasyCommons](readme-zh.md "EasyCommons")  项目下的 Obejct 对象操作工具类。
 
+
 ## 1. Javadoc
 [EasyObjectUtils Javadoc](../javadoc/easycommons-objectutils/index.html "EasyObjectUtils Javadoc")
 
@@ -94,6 +95,16 @@ setNull(Object[], fieldExpressions)
  **demo:**
 ```JAVA
 EasyObjectSetNull.setNull(users, "password","{roles}.rights");
+```
+
+## 3. Maven
+```XML
+<!-- EasyObjectUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-object</artifactId>
+	<version>1.7.4-RELEASE</version>
+</dependency>
 ```
 
 ## 结束

@@ -7,6 +7,7 @@ Java提供的 java.util.Properties 不仅仅在设计上存在问题，并且功
 
 **使用EasyProperties可以完全替代java.util.Properties。**
 
+
 ## 1. Javadoc
 [EasyPropertiesUtils Javadoc](../javadoc/easycommons-propertiesutils/index.html "EasyPropertiesUtils Javadoc")
 
@@ -44,6 +45,16 @@ EasyPropertiesUtils 包括如下组件：
  merger(propertiesFile, Properties properties [, charset]);
  modify(propertiesFile, Map<String, String> properties [, charset]);
  modify(propertiesFile, Properties properties [, charset]);
+```
+
+## 3. Maven
+```XML
+<!-- EasyPropertiesUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-properties</artifactId>
+	<version>1.4.1-RELEASE</version>
+</dependency>
 ```
 
 ## 结束

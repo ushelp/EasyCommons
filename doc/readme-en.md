@@ -71,7 +71,29 @@ Obejct manipulation tools under EasyCommons project.
 ### [EasyObjectUtils API](EasyObjectUtils-API-en.md "EasyObjectUtils API")
 
 
+## Maven
+```XML
+<!-- EasyObjectUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-object</artifactId>
+	<version>1.7.4-RELEASE</version>
+</dependency>
 
+<!-- EasyImageUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-image</artifactId>
+	<version>1.4.2-RELEASE</version>
+</dependency>
+
+<!-- EasyPropertiesUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-properties</artifactId>
+	<version>1.4.1-RELEASE</version>
+</dependency>
+```
 
 ## End
 

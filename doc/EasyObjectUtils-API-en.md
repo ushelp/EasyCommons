@@ -95,6 +95,17 @@ setNull(Object[], fieldExpressions)
 EasyObjectSetNull.setNull(users, "password","{roles}.rights");
 ```
 
+## 3. Maven
+```XML
+<!-- EasyObjectUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-object</artifactId>
+	<version>1.7.4-RELEASE</version>
+</dependency>
+```
+
+
 ## End
 
 [Comments](http://www.easyproject.cn/easycommons/en/index.jsp#about 'Comments')

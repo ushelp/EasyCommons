@@ -66,6 +66,17 @@ textWatermark(sourceImgFile, content, [,targetImgFile])
 ```
 
 
+## 3. Maven
+```XML
+<!-- EasyImageUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-image</artifactId>
+	<version>1.4.2-RELEASE</version>
+</dependency>
+```
+
+
 ## 结束
 
 [留言评论](http://www.easyproject.cn/easycommons/zh-cn/index.jsp#about '留言评论')

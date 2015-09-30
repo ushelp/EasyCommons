@@ -7,6 +7,7 @@ Java.util.Properties Java provides not only the existence of problems in the des
 
 **Use EasyProperties can completely replace java.util.Properties.**
 
+
 ## 1. Javadoc
 [EasyPropertiesUtils Javadoc](../javadoc/easycommons-propertiesutils/index.html "EasyPropertiesUtils Javadoc")
 
@@ -44,6 +45,16 @@ EasyPropertiesUtils It includes the following components：
  merger(propertiesFile, Properties properties [, charset]);
  modify(propertiesFile, Map<String, String> properties [, charset]);
  modify(propertiesFile, Properties properties [, charset]);
+```
+
+## 3. Maven
+```XML
+<!-- EasyPropertiesUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-properties</artifactId>
+	<version>1.4.1-RELEASE</version>
+</dependency>
 ```
 
 ## End

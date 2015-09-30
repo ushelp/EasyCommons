@@ -26,6 +26,30 @@ The reason comes from component development needs can not be met, dissatisfactio
 [Project Description-English](doc/readme-en.md)
 
 
+## Maven
+```XML
+<!-- EasyObjectUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-object</artifactId>
+	<version>1.7.4-RELEASE</version>
+</dependency>
+
+<!-- EasyImageUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-image</artifactId>
+	<version>1.4.2-RELEASE</version>
+</dependency>
+
+<!-- EasyPropertiesUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-properties</artifactId>
+	<version>1.4.1-RELEASE</version>
+</dependency>
+```
+
 ## 
 
 [官方主页](http://www.easyproject.cn/easycommons/zh-cn/index.jsp '官方主页')
