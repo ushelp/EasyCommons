@@ -4,30 +4,38 @@
 
 EasyCommons是一个针对Java开发领域提供通用开发组件的项目。旨在为Java项目开发领域并不完善的一些方面，提供一些组件级的解决方案。
 
-组件开发的原因来源于需求的无法满足，不满并决心改变引导出了这样的一个项目。该项目会不断收集相关组件，也欢迎有新的组件加入。
+组件开发的原因来源于需求的无法满足，不满并决心改变引导出了这样的一个项目。该项目有多个子项目，会不断收集相关组件，也欢迎有新的组件加入。
 
-目前包括以下子项目：
+**项目列表：**
 
-- **EasyImageUtils**  图片处理组件
-- **EasyPropertiesUitls**  Properties 文件操作组件
-- **EasyObjectUtils** Obejct 对象操作组件
+- **[EasyPropertiesUitls](https://github.com/ushelp/EasyCommons-PropertiesUtils "转到 EasyPropertiesUtils")**  Properties 文件操作组件
+- **[EasyImageUtils](https://github.com/ushelp/EasyCommons-ImageUtils "转到 EasyImageUtils")**  图片处理组件（压缩，水印，地址提取）
+- **[EasyObjectUtils](https://github.com/ushelp/EasyCommons-ObjectUtils "转到 EasyObjectUtils")** Obejct 对象操作组件（对象属性抽取，对象属性置空，对象内容过滤；支持 `FieldExpression`）
  
-[项目简介-中文](doc/readme-zh.md)
+
 
 
 EasyCommons is a development component to provide a common field for Java development projects. Java is designed to develop programs in the field of some aspects of the project is not perfect, some component-level solutions.
 
-The reason comes from component development needs can not be met, dissatisfaction and determination to change the boot out of such a project. The project will continue to collect related components, also welcomed the new components added.
+The reason comes from component development needs can not be met, dissatisfaction and determination to change the boot out of such a project. The project has multiple sub-projects, will continue to collect related components, also welcomed the new components added.
 
-- **EasyImageUtils**  Image processing components
-- **EasyPropertiesUitls**  Properties file operations component
-- **EasyObjectUtils** Obejct operations component
+**Project lists:**
+
+- **[EasyPropertiesUitls](https://github.com/ushelp/EasyCommons-PropertiesUtils "Goto EasyPropertiesUtils")**  Properties file operations component
+- **[EasyImageUtils](https://github.com/ushelp/EasyCommons-ImageUtils "Goto EasyImageUtils")**  Image processing components(Compression, Watermark, Find URL)
+- **[EasyObjectUtils](https://github.com/ushelp/EasyCommons-ObjectUtils "Goto EasyObjectUtils")** Obejct operations component(Object property extract, Object property set null, Object content filter; support `FieldExpression`)
  
-[Project Description-English](doc/readme-en.md)
 
 
 ## Maven
 ```XML
+<!-- EasyPropertiesUtils -->
+<dependency>
+	<groupId>cn.easyproject</groupId>
+	<artifactId>easycommons-properties</artifactId>
+	<version>2.0.0-RELEASE</version>
+</dependency>
+
 <!-- EasyObjectUtils -->
 <dependency>
 	<groupId>cn.easyproject</groupId>
@@ -41,16 +49,9 @@ The reason comes from component development needs can not be met, dissatisfactio
 	<artifactId>easycommons-image</artifactId>
 	<version>1.4.2-RELEASE</version>
 </dependency>
-
-<!-- EasyPropertiesUtils -->
-<dependency>
-	<groupId>cn.easyproject</groupId>
-	<artifactId>easycommons-properties</artifactId>
-	<version>1.4.1-RELEASE</version>
-</dependency>
 ```
 
-## 
+## End
 
 [官方主页](http://www.easyproject.cn/easycommons/zh-cn/index.jsp '官方主页')
 
